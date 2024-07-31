@@ -1,3 +1,21 @@
+create database hospital;
+use hospital;
+
+create table medico(
+crm int primary key,
+esp varchar(50),
+nome varchar(50)
+);
+create table ala(
+nome varchar(50),
+id int primary key
+);
+
+create table quarto(
+num int primary key,
+andar int,
+FK_ala_id int,
+foreign key(FK_ala_id) references ala(id)
 );
 
  create table paciente(
