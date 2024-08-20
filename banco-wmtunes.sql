@@ -11,7 +11,7 @@ email varchar(50)
 
 create table plano(
 cod varchar(50) primary key,
-tipo varchar(5),
+tipo varchar(100),
 descrição varchar(1000),
 valor double
 );
@@ -28,8 +28,8 @@ foreign key(FK_plano_cod) references plano(cod)
 create table playlist(
 cod varchar (9) primary key,
 nome varchar(50),
-FK_usuarios_nome varchar(100),
-foreign key (FK_usuarios_nome) references usuarios(nome)
+FK_usuarios_cpf varchar(14),
+foreign key (FK_usuarios_cpf) references usuarios(cpf)
 );
 
 create table musica(
@@ -46,50 +46,50 @@ nome varchar(50)
 
 create table artistausuarios(
 FK_artista_cpf varchar(14),
-FK_usuarios_nome varchar(100),
-primary key(FK_artista_cpf, FK_usuarios_nome),
+FK_usuarios_cpf varchar(14),
+primary key(FK_artista_cpf, FK_usuarios_cpf),
 foreign key(FK_artista_cpf) references artista (cpf),
-foreign key(FK_usuarios_nome) references usuarios (nome)
+foreign key(FK_usuarios_cpf) references usuarios (cpf)
 );
 
 create table musicaplaylist(
 FK_musica_nome varchar(78),
 FK_playlist_cod varchar(9),
-primary key(FK_musica_nome, FK_playlist_cod),
 foreign key(FK_musica_nome) references musica (nome),
-foreign key(FK_usuarios_cod) references playlist (cod)
+foreign key(FK_playlist_cod) references playlist (cod),
+primary key(FK_musica_nome, FK_playlist_cod)
 );
 
 create table generoartista(
 FK_genero_cod varchar(50),
 FK_artista_cpf varchar(14),
-primary key(FK_genero_cod, FK_artista_cpf),
-foreign key(FK_genero_cod) references genero (cod),
-foreign key(FK_artista_cpf) references artista (cpf) 
+foreign key(FK_genero_cod) references genero_musical (cod),
+foreign key(FK_artista_cpf) references artista (cpf),
+primary key(FK_genero_cod, FK_artista_cpf)
 );
 
 create table musicagenero(
 FK_musica_nome varchar(78),
 FK_genero_cod varchar (50),
-primary key(FK_musica_nome, FK_genero_cod),
 foreign key(FK_musica_nome) references musica (nome),
-foreign key(FK_genero_cod) references genero(cod)
+foreign key(FK_genero_cod) references genero_musical (cod),
+primary key(FK_musica_nome, FK_genero_cod)
 );
 
 create table musicaartista(
 FK_musica_nome varchar (78),
 FK_artista_cpf varchar (14),
-primary key(FK_musica_nome, FK_artista_cpf),
 foreign key(FK_musica_nome) references musica (nome),
-foreign key(FK_artista_cpf) references artista (cpf)
+foreign key(FK_artista_cpf) references artista (cpf),
+primary key(FK_musica_nome, FK_artista_cpf)
 );
 
-create table usuariomusica(
-FK_usuario_cpf varchar (14),
+create table usuariosmusica(
+FK_usuarios_cpf varchar (14),
 FK_musica_nome varchar(78),
-primary key(FK_usuario_cpf, FK_musica_nome),
-foreign key(FK_usuario_cpf) references usuario (cpf),
-foreign key(FK_musica_nome) references musica (nome)
+foreign key(FK_usuarios_cpf) references usuarios (cpf),
+foreign key(FK_musica_nome) references musica (nome),
+primary key(FK_usuarios_cpf, FK_musica_nome)
 );
 
 
