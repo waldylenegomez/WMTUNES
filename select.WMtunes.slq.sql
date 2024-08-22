@@ -1,5 +1,5 @@
-#1 Selecione os generos musicais
-SELECT * FROM genero_musical;
+#1 Selecione as musicas que pertencem à playlist funk 
+SELECT FK_musica_nome AS Funk FROM musicaplaylist WHERE FK_playlist_cod = "12345";
 
 #2 Selecione o valor do plano mais caro e o mais barato
 SELECT max(valor) AS maior, min(valor) AS menor FROM plano;
@@ -7,16 +7,24 @@ SELECT max(valor) AS maior, min(valor) AS menor FROM plano;
 #3 Selecione os planos mensais em ordem crescente
 SELECT * FROM plano ORDER BY valor;
 
-#4 Selecionar o nome de cada música
-SELECT nome FROM musica
-#5 Selecionar as musicas lançadas em 2015
-SELECT * FROM musica 
-#6 Selecionar a letra da primeira música
+#4 Selecionar músicas lançadas entre 2010 e 2020
+SELECT nome, lancamento FROM musica WHERE lancamento BETWEEN "2010-01-01" AND ""
+"2020-12-31";
 
-#7 Selecionar as playlist de acordo com o ano de lançamento em ordem decrescente
+#5 Selecionar as musicas lançadas em 2001
+SELECT nome FROM musica WHERE lancamento = "2001";
 
-#8 Selencionar musicas disponiveis
+#6 Selecionar total de músicas disponíveis
+SELECT COUNT(*) AS total_musicas FROM musica;
 
-#9 Selecionar o cpf do segundo usuario
+#7 Selecionar os artistas ordenados por nome em ordem decrescente
+SELECT nome FROM artista ORDER BY nome DESC;
 
-#10 Selecionar as músicas por ordem alfabetica 
+#8 Selecionar todas as músicas selecionadas por lançamento em ordem crescente
+SELECT nome lacamento FROM musica ORDER BY lancamento ASC;
+
+#9 Selecione o número de um artista específico
+SELECT num  AS numero FROM artista WHERE nome = "Mariana Vanessa";
+
+#10 Selecionar artistas cujo o nome começa com "M"
+SELECT nome FROM artista WHERE nome LIKE "W%";

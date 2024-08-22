@@ -21,7 +21,7 @@ insert into playlist (cod, nome, FK_usuarios_cpf) values
 insert into musica (nome, letra, lancamento, descricao) values
 ("Glamurosa", "Glamurosa, rainha do funk...", "2001","Glamurosa (Mc Marcinho)"),
 ("Beijos blues e poesias", "Chorando o gelo que você me deu...", "2015", "Álbum: K-Sis"),
-("Me namora", "Lembro que te vi caminhar...","2015", "Artista: Natiruts");
+("Me namora", "Lembro que te vi caminhar...","2019", "Artista: Natiruts");
 
 insert into genero_musical (cod, nome) values
 ("342345", "Gospel"),
