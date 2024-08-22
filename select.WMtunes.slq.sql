@@ -8,7 +8,7 @@ SELECT max(valor) AS maior, min(valor) AS menor FROM plano;
 SELECT * FROM plano ORDER BY valor;
 
 #4 Selecionar músicas lançadas entre 2010 e 2020
-SELECT nome, lancamento FROM musica WHERE lancamento BETWEEN "2010-01-01" AND ""
+SELECT nome, lancamento FROM musica WHERE lancamento BETWEEN "2010-01-01" AND
 "2020-12-31";
 
 #5 Selecionar as musicas lançadas em 2001
