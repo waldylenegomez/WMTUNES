@@ -60,4 +60,7 @@ insert into usuariosmusica (FK_usuarios_cpf, FK_musica_nome) values
 ("444.444.444-44", "Beijos blues e poesias"),
 ("555.555.555-55", "Me namora");
 
-insert into usuariogenerofav (FK_usuarios_cpf,FK_genero_cod)
+insert into usuariosgenerofav (FK_usuarios_cpf, FK_genero_cod) values
+("333.333.333-33", "342345"),
+("444.444.444-44", "098745"),
+("555.555.555-55", "176409");
