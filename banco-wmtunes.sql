@@ -6,7 +6,8 @@ cpf varchar(14) primary key,
 bio varchar(100),
 num varchar(100),
 nome varchar(50),
-email varchar(50)
+email varchar(50),
+foto varchar (1000)
 );
 
 create table plano(
@@ -17,10 +18,14 @@ valor double
 );
 
 create table usuarios(
-cpf varchar(14) primary key,
+cpf varchar (14) primary key,
 nome varchar (50),
-num varchar(100),
-email varchar(50),
+num varchar (100),
+email varchar (50),
+foto varchar (1000),
+biografia varchar (1000),
+link varchar (1000),
+pronomes varchar (50),
 FK_plano_cod varchar (50),
 foreign key(FK_plano_cod) references plano(cod)
 );
