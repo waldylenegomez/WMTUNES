@@ -60,23 +60,4 @@ insert into usuariosmusica (FK_usuarios_cpf, FK_musica_nome) values
 ("444.444.444-44", "Beijos blues e poesias"),
 ("555.555.555-55", "Me namora");
 
-insert into artistasfavoritos  (nome, foto) values
-("Aline Barros", "Aline.png"),
-("Lady Gaga", " Lady.png"),
-("Marília", " Marília.png");
-
-insert into tocadasrecentes (nome, foto) values
-("Entre", "entre.png"),
-("Die with a smile", "smile.png"),
-("Oração", "oracao.png");
-
-insert into emalta (nome, foto) values
-("Adele", "Adele.png"),
-("Beyoncé", "Beyoncé.png"),
-("Taylor", "Taylor.png");
-
-insert into vocepodegostar (nome, foto) values
-("Scorpions", "Scorpions.png"),
-("Tribalistas", "Tribalistas.png"),
-("Mazzy Star", "Mazzy Star.png");
 
