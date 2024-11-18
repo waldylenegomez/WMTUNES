@@ -8,10 +8,10 @@ insert into plano (cod, tipo, descrição, valor) values
 ("115611", "Anual", "Plano Familia, 6 contas Premium ou Kids", 200),
 ("256235", "Mensal", "Plano Duo, 2 contas Premium", 27.90);
 
-insert into usuarios (cpf, nome, num, email) values
-("333.333.333-33", " Maryanna", "(82)9917-7655)", "maryanna356@gmail.com"),
-("444.444.444-44", "Givanildo", "(82) 9980-6574", "givanidss23@gmail.com"),
-("555.555.555-55", "Jujuba", "(82) 9936-8410", "jujubs10@gmail.com");
+insert into usuarios (cpf, nome, num, email, foto, biografia, link, pronomes) values
+("333.333.333-33", " Maryanna", "(82)9917-7655)", "maryanna356@gmail.com", "Maryanna.png", "MCZ 💗", "instagram.com", "Ela/Dela"),
+("444.444.444-44", "Givanildo", "(82) 9980-6574", "givanidss23@gmail.com", "Givanildo.png", "🎧 music", "insta\gram.ww", "Ele/Dele"),
+("555.555.555-55", "Julia", "(82) 9936-8410", "jujubs10@gmail.com", "Julia.png", "Blessed 🪷🫶🏻","youtube.com.www",  "Ela/Dela");
 
 insert into playlist (cod, nome, FK_usuarios_cpf) values
 ("12345", "Funk", "333.333.333-33"),
@@ -60,7 +60,23 @@ insert into usuariosmusica (FK_usuarios_cpf, FK_musica_nome) values
 ("444.444.444-44", "Beijos blues e poesias"),
 ("555.555.555-55", "Me namora");
 
-insert into usuariosgenerofav (FK_usuarios_cpf, FK_genero_cod) values
-("333.333.333-33", "342345"),
-("444.444.444-44", "098745"),
-("555.555.555-55", "176409");
+insert into artistasfavoritos  (nome, foto) values
+("Aline Barros", "Aline.png"),
+("Lady Gaga", " Lady.png"),
+("Marília", " Marília.png");
+
+insert into tocadasrecentes (nome, foto) values
+("Entre", "entre.png"),
+("Die with a smile", "smile.png"),
+("Oração", "oracao.png");
+
+insert into emalta (nome, foto) values
+("Adele", "Adele.png"),
+("Beyoncé", "Beyoncé.png"),
+("Taylor", "Taylor.png");
+
+insert into vocepodegostar (nome, foto) values
+("Scorpions", "Scorpions.png"),
+("Tribalistas", "Tribalistas.png"),
+("Mazzy Star", "Mazzy Star.png");
+

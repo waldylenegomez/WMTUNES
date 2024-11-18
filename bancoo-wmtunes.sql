@@ -97,19 +97,26 @@ foreign key(FK_musica_nome) references musica (nome),
 primary key(FK_usuarios_cpf, FK_musica_nome)
 );
 
-create table usuariosgenerofav(
-FK_usuarios_cpf varchar(14),
-FK_genero_cod varchar(50),
-foreign key(FK_usuarios_cpf) references usuarios (cpf),
-foreign key(FK_genero_cod) references genero_musical (cod)
+create table artistasfavoritos(
+nome varchar(1000),
+foto varchar (1000)
 );
 
-create table usuariosartistafav(
-FK_usuarios_cpf varchar(14),
-FK_artista_cpf varchar(14),
-foreign key(FK_usuarios_cpf) references usuarios (cpf),
-foreign key(FK_artista_cpf) references artista (cpf)
+create table tocadasrecentes(
+nome varchar (1000),
+foto varchar (1000)
 );
+
+create table emalta(
+nome varchar(1000),
+foto varchar (1000)
+);
+
+create table vocepodegostar(
+nome varchar(1000),
+foto varchar (1000)
+);
+
 
 
 
