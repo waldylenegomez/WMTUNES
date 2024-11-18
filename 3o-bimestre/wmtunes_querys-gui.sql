@@ -6,7 +6,7 @@ select pronomes from usuarios;
 select link from usuarios;
 
 #Tela usuario 
-select  
+select u.foto as foto, u.nome as nome
 
 
  
