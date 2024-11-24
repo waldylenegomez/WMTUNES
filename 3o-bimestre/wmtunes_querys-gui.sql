@@ -12,4 +12,3 @@ select u.foto as foto, u.nome as nome, a.nome as artista
 
  
 
-#info extra user
