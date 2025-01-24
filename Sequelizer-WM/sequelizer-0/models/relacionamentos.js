@@ -10,6 +10,7 @@ const Usuarios = require("./usuarios");
 const Musica = require("./musica");
 const Playlist = require("./playlist");
 const Genero_musical = require("./genero_musical");
+const Plano = require("./plano");
 
 
     Musica.belongsToMany(Playlist, { through: "MusicaPlaylist" });
@@ -33,6 +34,10 @@ Genero_musical.belongsToMany(Usuarios, { through: "UsuariosGeneroFav" });
     Usuarios.belongsToMany(Artista, { through: "UsuariosArtistaFav" });
 Artista.belongsToMany(Usuarios, { through: "UsuariosArtistaFav" });
 
+Usuarios.hasMany(Plano, { foreignKey: 'cpf' });
+Plano.belongsTo(Usuarios, { foreignKey: 'cpf' });
 
+Usuarios.hasMany(Playlist, { foreignKey: 'cpf' });
+Playlist.belongsTo(Usuarios, { foreignKey: 'cpf' });
 
 
