@@ -17,7 +17,7 @@ const Plano = sequelize.define('Plano', {
   },
 
   valor : {
-    type: DataTypes.DOUBLE,
+    type: DataTypes.DOUBLE, 
     allowNull: false,
   },
 

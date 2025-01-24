@@ -1,16 +1,14 @@
 const Artista = require("./artista");
 const Usuarios = require("./usuarios");
-
-
-    Artista.belongsToMany(Usuarios, { through: "ArtistaUsuario" });
-Usuarios.belongsToMany(Artista, { through: "ArtistaUsuario" });
-
-const Artista = require("./artista");
-const Usuarios = require("./usuarios");
 const Musica = require("./musica");
 const Playlist = require("./playlist");
 const Genero_musical = require("./genero_musical");
 const Plano = require("./plano");
+
+    Artista.belongsToMany(Usuarios, { through: "ArtistaUsuario" });
+Usuarios.belongsToMany(Artista, { through: "ArtistaUsuario" });
+
+
 
 
     Musica.belongsToMany(Playlist, { through: "MusicaPlaylist" });

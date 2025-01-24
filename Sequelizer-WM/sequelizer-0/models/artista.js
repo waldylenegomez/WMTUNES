@@ -16,11 +16,6 @@ const Artista = sequelize.define('Artista', {
     allowNull: false,
   },
 
-  num: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-
   nome: {
     type: DataTypes.STRING,
     allowNull: false,
