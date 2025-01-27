@@ -5,6 +5,7 @@ const Playlist = sequelize.define('Playlist', {
   cod: {
     type: DataTypes.STRING,
     allowNull: false,
+    primaryKey: true
   },
   nome: {
     type: DataTypes.STRING,

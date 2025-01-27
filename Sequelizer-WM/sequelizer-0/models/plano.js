@@ -5,6 +5,7 @@ const Plano = sequelize.define('Plano', {
   cod: {
     type: DataTypes.STRING,
     allowNull: false,
+    primaryKey: true
   },
   tipo: {
     type: DataTypes.STRING,

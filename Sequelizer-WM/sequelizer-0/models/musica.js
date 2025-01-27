@@ -5,6 +5,7 @@ const Musica = sequelize.define('Musica', {
   nome: {
     type: DataTypes.STRING,
     allowNull: false,
+    primaryKey: true
   },
   
   letra: {

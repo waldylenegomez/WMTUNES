@@ -5,12 +5,12 @@ const Playlist = require("./models/playlist");
 const Genero_musical = require("./models/genero_musical");
 const Plano = require("./models/plano");
 const sequelize = require('./db');
-const relacionamentos = require('./models/relacionamentos')
+const Setuprelacionamentos = require('./models/relacionamentos')
 
 (async () => {
     try {
       // Configurar relacionamentos
-      relacionamentos();
+      Setuprelacionamentos();
   
       // Sincronizar o banco de dados
       await sequelize.sync({ force: true });
@@ -49,7 +49,7 @@ const relacionamentos = require('./models/relacionamentos')
     nome: 'Músicas para relaxar',
 });
 
-    const generomusicall = await Genero_musical.create({
+    const generomusical = await Genero_musical.create({
     cod: '123456', 
     nome: 'MPB',
 });
@@ -61,6 +61,16 @@ const relacionamentos = require('./models/relacionamentos')
     valor: '19.50',
 
 });
+
+    await artista1.addUsuarios(usuario1)
+    await musica1.addPlaylist(playlist1)
+    await artista1.addGenero_musical(generomusical)
+    await musica1.addGenero_musical(generomusical)
+    await musica1.addArtista(artista1)
+    await usuario1.addMusica(musica1)
+    await usuario1.addGenero_musical(generomusical)
+    await usuario1.addArtista(artista1)
+  
 
     } catch (error) {
       console.error('Erro ao sincronizar o banco de dados:', error);

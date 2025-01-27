@@ -1,11 +1,11 @@
 const {Sequelize} = require('sequelize');
 const sequelize = new Sequelize(
     'wmtunes', 
-    'sequelize', // nome de usuario  
-    'sequelize', // senha de acesso
+    'aluno.ifal', // nome de usuario  
+    '', // senha de acesso
     {
         host: 'localhost',
         dialect: 'mysql'
     }
 );
-module.exports = sequelize;
+module.exports = sequelize;       

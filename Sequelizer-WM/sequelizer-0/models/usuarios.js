@@ -5,6 +5,7 @@ const Usuarios = sequelize.define('Usuarios', {
   cpf: {
     type: DataTypes.STRING,
     allowNull: false,
+    primaryKey: true
   },
   nome: {
     type: DataTypes.STRING,

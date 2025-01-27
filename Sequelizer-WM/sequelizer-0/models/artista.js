@@ -5,6 +5,7 @@ const Artista = sequelize.define('Artista', {
   cpf: {
     type: DataTypes.STRING,
     allowNull: false,
+    primaryKey: true
   },
   bio: {
     type: DataTypes.TEXT,

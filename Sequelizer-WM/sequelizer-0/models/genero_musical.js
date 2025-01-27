@@ -5,6 +5,7 @@ const Genero_musical = sequelize.define('Genero_musical', {
   cod: {
     type: DataTypes.STRING,
     allowNull: false,
+    primaryKey: true
   },
   
   nome: {
