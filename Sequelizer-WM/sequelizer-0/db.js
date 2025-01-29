@@ -2,7 +2,7 @@ const {Sequelize} = require('sequelize');
 const sequelize = new Sequelize(
     'wmtunes', 
     'aluno.ifal', // nome de usuario  
-    '', // senha de acesso
+    'aluno.ifal', // senha de acesso
     {
         host: 'localhost',
         dialect: 'mysql'
